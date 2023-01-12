@@ -6,9 +6,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function (input, lettersToCount) {
+
+const countLetters = function (lettersToCount) {
   let result = {}
-  let string = input.replaceAll(" ", "")
+  let string = lettersToCount.replaceAll(" ", "")
   for (let letter of string) {
       if (result[letter]) {
         result[letter]++;
@@ -16,13 +17,12 @@ const countLetters = function (input, lettersToCount) {
         result[letter] = 1;
       }
     }
-console.log("result",result)
 return result;
 }
 
-const input = "my brain is in pain"
+const lettersToCount = "my brain is in pain"
 
-const result1 = countLetters(input, {"a": true,"b": true,"i": true,"c": true,"p": true, "z": false})
+const result1 = countLetters(lettersToCount, {"a": true,"b": true,"i": true,"c": true,"p": true, "z": true})
 
 assertEqual(result1["a"], 2);
 assertEqual(result1["b"], 1);
