@@ -9,20 +9,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// return an object containing counts of everything that the input object listed.
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-// loop through list of names
-// check if the name is on the list, if so increase count
-// const countOnly = function(allItems, itemsToCount) {
-//   const results = {}
-//   for (let name of allItems) {
-//     console.log(name)
-//   }
-
-// }
-
 const countOnly = function(allItems, itemsToCount) {
   const result = {};
   for (const item of allItems) {
