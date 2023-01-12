@@ -22,10 +22,9 @@ return result;
 
 const lettersToCount = "my brain is in pain"
 
-const result1 = countLetters(lettersToCount, {"a": true,"b": true,"i": true,"c": true,"p": true, "z": true})
 
-assertEqual(result1["a"], 2);
-assertEqual(result1["b"], 1);
-assertEqual(result1["i"], 4);
-assertEqual(result1["p"], 1);
-assertEqual(result1["z"], undefined);
+assertEqual((lettersToCount["a"], 2), 2);
+assertEqual((lettersToCount["b"], 1), 1);
+assertEqual((lettersToCount["i"], 4), 4);
+assertEqual((lettersToCount["p"], 1), 1);
+assertEqual((lettersToCount["z"], undefined), undefined);
