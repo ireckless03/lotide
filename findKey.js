@@ -17,7 +17,7 @@ const findKey = (object, callBack) => {
 
 
 
-const testObject1 = {
+const testObject = {
   "Blue Hill": { stars: 1 },
   "Akaleri": { stars: 3 },
   "noma": { stars: 2 },
@@ -26,8 +26,7 @@ const testObject1 = {
   "Akelarre": { stars: 3 }
 };
 
-const result1 = findKey(testObject1, x => x.stars === 2)
 
-assertEqual(findKey(result1,"noma"));
-// assertEqual(findKey(testObject1, x => x.stars === 3), "Akaleri");
-// assertEqual(findKey(testObject1, x => x.stars === 1), "Blue Hill");
+assertEqual(findKey(testObject, x => x.stars === 2), "noma");
+assertEqual(findKey(testObject, x => x.stars === 3), "Akaleri");
+assertEqual(findKey(testObject, x => x.stars === 1), "Blue Hill");
