@@ -1,8 +1,19 @@
 // TEST CODE
-const head = require('../head');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+const head   = require('../head');
 
-assertEqual(head([1,6,7]), 1);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["Long", "Days", "Ahead"]), "Long");
+describe("Returning the first element in the array", () => {
+  it("returns 1 for [1, 6, 7]", () => {
+    assert.strictEqual(head([1,6,7]), 1);
+  });
+});
+
+it("returns '5' for ['5']", () => {
+  assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); 
+});
+
+it("returns '5' for ['5']", () => {
+  assert.strictEqual(head(["Long", "Days", "Ahead"]), "long"); 
+});
+
 
