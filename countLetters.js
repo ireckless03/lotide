@@ -28,3 +28,5 @@ assertEqual((lettersToCount["b"], 1), 1);
 assertEqual((lettersToCount["i"], 4), 4);
 assertEqual((lettersToCount["p"], 1), 1);
 assertEqual((lettersToCount["z"], undefined), undefined);
+
+module.exports = countLetters;

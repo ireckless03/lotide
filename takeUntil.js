@@ -45,3 +45,4 @@ console.log("------------------------------------");
 console.log("Test 3");
 assertArraysEqual(takeUntil(data1, x => x === 4),[1, 2, 5, 7, 2, -1, 2]);
 assertArraysEqual(takeUntil(data2,x => x === 'Redwood'),["I've", "been", "to", "Hollywood", ",", "I've", "been", "to"]);
+

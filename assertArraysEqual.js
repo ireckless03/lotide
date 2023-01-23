@@ -1,4 +1,4 @@
-const eqArrays = require('./eqArrays');
+const eqArrays = require('./eqArrays')
 
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected) === true) {
@@ -7,5 +7,7 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`❌❌❌Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+assertArraysEqual(eqArrays([1,2,3], [1,2,3]),true)
 
 module.exports = assertArraysEqual;

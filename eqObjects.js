@@ -1,21 +1,16 @@
-const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual')
-// do they have same number of keys?
-// the value of each key is same as the other?
+
 const eqObjects = function(object1, object2) {
   const objKeys1 = Object.keys(object1).sort();
   const objKeys2 = Object.keys(object2).sort();
   let objValue1 = [];
   let objValue2 = [];
 
-  if (objKeys1.length !== objKeys2.length) {
+  if ((objKeys1.length !== objKeys2.length) || (!eqArrays(objKeys1, objKeys2))) {
     return false;
   }
+  
 
-  if (!eqArrays(objKeys1, objKeys2)) {
-  return false;
-  }
 
   for (key in object1) {
     objValue1.push(object1[key]);
@@ -33,17 +28,6 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 };
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-eqObjects(shirtObject , anotherShirtObject); // => true
-//We need to use that return value in combination with assertEquals to test if the function is working correctly.
-assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
-
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-
-eqObjects(shirtObject , longSleeveShirtObject); // => false
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
 
 module.exports = eqObjects;
 

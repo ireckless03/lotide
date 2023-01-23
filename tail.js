@@ -1,3 +1,6 @@
+const assertEqual = require('./assertEqual')
+
+//write a function
 const tail = (words) => {
   if (words.length < 1) {
     return [];
